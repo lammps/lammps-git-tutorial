@@ -51,6 +51,8 @@ http://lammps.sandia.gov/doc/Developer.pdf       LAMMPS developer guide
 
 You can also create these doc pages locally:
 
-% cd doc
-% make html                # creates HTML pages in doc/html
-% make pdf                 # creates Manual.pdf and Developer.pdf
+```bash
+cd doc
+make html                # creates HTML pages in doc/html
+make pdf                 # creates Manual.pdf and Developer.pdf
+```
