@@ -11,7 +11,7 @@
    See the README file in the top-level LAMMPS directory.
 ------------------------------------------------------------------------- */
 
-#include "compute_pe.h"
+#include "compute_vsq.h"
 #include <mpi.h>
 #include <cstring>
 #include "atom.h"
@@ -31,7 +31,7 @@ using namespace LAMMPS_NS;
 
 /* ---------------------------------------------------------------------- */
 
-ComputePE::ComputePE(LAMMPS *lmp, int narg, char **arg) :
+ComputeVSQ::ComputeVSQ(LAMMPS *lmp, int narg, char **arg) :
   Compute(lmp, narg, arg)
 {
   if (narg < 3) error->all(FLERR,"Illegal compute pe command");
@@ -69,7 +69,7 @@ ComputePE::ComputePE(LAMMPS *lmp, int narg, char **arg) :
 
 /* ---------------------------------------------------------------------- */
 
-double ComputePE::compute_scalar()
+double ComputeVSQ::compute_scalar()
 {
   invoked_scalar = update->ntimestep;
   if (update->eflag_global != invoked_scalar)
